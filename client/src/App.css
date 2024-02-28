@@ -1,0 +1,169 @@
+:root {
+  /* Dark mocha background */
+  --mocha-background: #382b1c;
+  /* Darker mocha container background */
+  --lighter-mocha-container: #5d4734;
+  /* Lighter mocha font color */
+  --lighter-mocha-font: #dcd0c0;
+}
+
+body {
+  background-color: #382b1c;
+  color: #dcd0c0;
+  background:
+    radial-gradient(circle at 100% 50%, transparent 20%, rgba(255, 255, 255, .3) 21%, rgba(255, 255, 255, .3) 34%, transparent 35%, transparent),
+    radial-gradient(circle at 0% 50%, transparent 20%, rgba(255, 255, 255, .3) 21%, rgba(255, 255, 255, .3) 34%, transparent 35%, transparent) 0 -50px;
+  background-color: var(--mocha-background);
+  background-size: 75px 100px;
+}
+
+/* Navbar */
+
+.navbar{
+  border-bottom: solid black 1px;
+  padding: 1%;
+  background-color: var(--lighter-mocha-container); /* Using variable for background color */
+  display: flex;
+}
+
+.navbar > button{
+  background-color: var(--mocha-background); /* Using variable for button background color */
+  color: var(--lighter-mocha-font); /* Using variable for button font color */
+  padding: 1em;
+  margin-left: 1em;
+  border-radius: 25%;
+}
+
+/* Add Goal */
+
+.add-goal{
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-goal-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50vw;
+  border-radius: 15px;
+  height: 70vh;
+  background-color: var(--lighter-mocha-container);
+}
+
+.add-goal-form > button{
+  background-color: var(--mocha-background); /* Using variable for button background color */
+  color: var(--lighter-mocha-font); /* Using variable for button font color */
+  padding: 1em;
+  margin-left: 1em;
+  border-radius: 25%;
+}
+
+input{
+  width: 20vw;
+  margin: 10px;
+  height: 2em;
+  padding: 1em;
+}
+
+textarea{
+  width: 20vw;
+  margin-bottom: 10px;
+  padding: 1em;
+}
+
+/* Home */
+
+.home{
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-message{
+  width: 50vw;
+  min-height: 100%;
+  background-color: var(--lighter-mocha-container);
+  border-radius: 20px;
+  padding: 2%;
+
+}
+
+.welcome-message > h1{
+  text-align: center;
+  font-size: 3em;
+}
+.welcome-message > p{
+  font-size: 2em;
+  font-weight: 200;
+}
+
+/* Goal List */
+
+.goal-list{
+  background-color: var(--lighter-mocha-container);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  min-height: fit-content;
+  margin: 2%;
+  border-radius: 20px;
+  padding: 2em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.goal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Single Goal */
+
+.single-goal {
+  padding: 1em;
+  margin: .5em;
+  width: 80%;
+  border-radius: 1em;
+  background-color: var(--mocha-background);
+  box-shadow: rgba(130, 105, 85, 0.4) 0px 0px 0px 2px, rgba(130, 105, 85, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.goal-description{
+  background-color: var(--lighter-mocha-container);
+  margin: .5em;
+  padding: .5em;
+  border: white solid .2px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .welcome-message, .add-goal-form {
+    width: 90vw; /* Adjusting width for smaller screens */
+  }
+
+  .welcome-message > h1 {
+    font-size: 2em; /* Decreasing font size for smaller screens */
+  }
+
+  .welcome-message > p {
+    font-size: 1.5em; /* Decreasing font size for smaller screens */
+  }
+
+  .add-goal-form input, .add-goal-form textarea {
+    width: 80vw; /* Adjusting input and textarea width for smaller screens */
+  }
+
+  .goal-list{
+    width: 80vw;
+  }
+}
