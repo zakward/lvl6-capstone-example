@@ -4,7 +4,7 @@ import { GoalContext } from "../context/GoalProvider";
 import { UserContext } from "../context/UserContext";
 
 const Goal = (props) => {
-    const { goalName, goalDescription, goalDate, user: userId, _id} = props;
+    const { goalName, goalDescription, goalDate, user: userId, _id, username} = props;
 
     const {deleteGoal, updateGoal}= useContext(GoalContext);
     const {user} = useContext(UserContext);
@@ -54,6 +54,7 @@ const Goal = (props) => {
 
     return (
         <div className="single-goal">
+            <h2>Posted By: {username}</h2>
             <h2>{goalName}</h2>
             <p>{daysDisplay} the goal date</p>
             {isUserGoal && 

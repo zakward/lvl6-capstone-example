@@ -22,6 +22,9 @@ const goalSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         ref: "user"
+    },
+    username: {
+        type: String
     }
 });
 

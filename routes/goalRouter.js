@@ -6,6 +6,7 @@ const goal = require('../models/goal')
 goalRouter.post('/', async (req, res, next) => {
     try {
         req.body.user = req.auth._id
+        req.body.username = req.auth.username
         const newGoal = new Goal(req.body)
         const savedGoal = await newGoal.save()
         return res.status(201).send(savedGoal)

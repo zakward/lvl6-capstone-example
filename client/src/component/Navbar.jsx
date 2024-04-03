@@ -4,7 +4,7 @@ import {UserContext} from "../context/UserContext"
 
 const Navbar = () => {
 
-    const {logout} = useContext(UserContext)
+    const {logout, token} = useContext(UserContext)
 
     const navigate = useNavigate()
 
@@ -17,7 +17,7 @@ const Navbar = () => {
             <button onClick={handleHomeClick}>Home</button>
             <button onClick={handleAddGoalClick}>PROFILE</button>
             <button onClick={handleSeeGoalsClick}>PUBLIC</button>
-            <button onClick = {logout}>Logout</button>
+            {token && <button onClick = {logout}>Logout</button>}
         </div>
     )
 }
