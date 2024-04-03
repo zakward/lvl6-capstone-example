@@ -15,8 +15,8 @@ const Navbar = () => {
     return(
         <div className="navbar">
             <button onClick={handleHomeClick}>Home</button>
-            <button onClick={handleAddGoalClick}>Share Your Goal</button>
-            <button onClick={handleSeeGoalsClick}>See Goals</button>
+            <button onClick={handleAddGoalClick}>PROFILE</button>
+            <button onClick={handleSeeGoalsClick}>PUBLIC</button>
             <button onClick = {logout}>Logout</button>
         </div>
     )

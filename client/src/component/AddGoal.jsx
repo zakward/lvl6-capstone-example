@@ -59,6 +59,7 @@ const AddGoal = () => {
         <>
             <div className="add-goal">
                 <form onSubmit={handleSubmit} className="add-goal-form">
+                    <h1>PROFILE PAGE</h1>
                     <h3>Share Your Goal!</h3>
                     <input
                         type="text"
@@ -77,7 +78,7 @@ const AddGoal = () => {
                     <button>Share!</button>
                 </form>
             </div>
-
+            <h3>Your Goals</h3>
             {usersGoalsElements}
         </>
     )

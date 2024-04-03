@@ -15,6 +15,8 @@ const AllGoals = () => {
     return (
         <div className='goal-container'>
             <div className='goal-list'>
+                <h1>Public Page</h1>
+                <h2>All Goals</h2>
                 {goalElements}
             </div>
         </div>

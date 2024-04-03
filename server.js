@@ -32,8 +32,8 @@ app.use((err, req, res, next) => {
     return res.send({errMsg: err.message})
 })
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
-// });
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+});
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
